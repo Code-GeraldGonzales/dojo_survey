@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+    <h2>Submitted Info</h2>
+    <hr size="1" width=230px color="gray" noshade>
+    <div class="varalign">
+    <p>Name: {{session.user_name}}</p>
+    <p>Dojo Location: {{session.user_locations}}</p>
+    <p>Your Language: {{session.user_languages}}</p>
+    </div>
+<div>
+<p class="ppos">
+    <form action="/back" method="POST">
+        <button class="button2" type="submit">Go Back</button>
+    </form>
+</p>
+</div>
+    </div>
+</body>
+</html>
